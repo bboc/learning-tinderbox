@@ -1,0 +1,51 @@
+# Site settings
+
+title: Learning Tinderbox
+email: bernhard.bockelbrink@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Learning Tinderbox is a free and open resource about making sense of Eastgate's app Tinderbox.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://bboc.github.io"
+twitter_username: ""
+github_username:  bboc
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+# Build settings
+markdown: kramdown
+theme: minima
+source:   .
+destination:  ./_site
+layouts_dir:  ./_layouts
+includes_dir: ./_includes
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page" # overrides previous default layout
+
+
+
+
+exclude:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - project.sublime-project
+   - project.sublime-workspace
+   - serve.sh
+   - tmp/
+   - README.md
